@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<h2>Juego de adivinación</h2>
+
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+    };
+
+    function imprimir(mensaje) {
+        document.write(mensaje);
+        saltarLinea();
+    };
+
+    var numeroPensado = parseInt(Math.random()* 10);
+    var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+
+    if (numeroLanzado == numeroPensado) {
+        imprimir("Adivinaste el número era " + numeroPensado + " - GANASTE 🎉")
+    } else {
+        imprimir(" No lo has logrado el número era " + numeroPensado );
+    };
+    
+    //if (numeroLanzado != numeroPensado) {
+    //    imprimir(" No lo has logrado el número era " + numeroPensado );
+    //}; 
+    //if (numeroLanzado < numeroPensado) {
+    //    imprimir("Estas por ABAJO ⬇ del número..");
+    //};
+
+
+
+    
+
+
+
+
+</script>

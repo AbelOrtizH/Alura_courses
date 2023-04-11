@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+
+<h2>Juego de adivinación</h2>
+
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+    };
+
+    function imprimir(mensaje) {
+        document.write(mensaje);
+        saltarLinea();
+    };
+
+    function loteria(n) {
+        numeroLoteria = Math.round(Math.random()*n);
+        return numeroLoteria
+    };
+
+    var numeroLimite = parseInt(prompt("Ingrese el límite superior: "));
+    var numeroPensado = loteria(numeroLimite);
+    var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y " + numeroLimite));
+
+    if (numeroLanzado == numeroPensado) {
+        imprimir("Adivinaste el número era " + numeroPensado + " - GANASTE 🎉")
+    } else {
+        imprimir(" No lo has logrado el número era " + numeroPensado );
+    };
+    
+    //if (numeroLanzado != numeroPensado) {
+    //    imprimir(" No lo has logrado el número era " + numeroPensado );
+    //}; 
+    //if (numeroLanzado < numeroPensado) {
+    //    imprimir("Estas por ABAJO ⬇ del número..");
+    //};
+
+
+
+    
+
+
+
+
+</script>
